@@ -4,10 +4,10 @@ def countdown(t):
     hour,min,sec=map(int,t)
     temp=hour*3600+min*60+sec
     while temp>0:
-        min,sec=divmod(temp,60)   #divmod() mod a number and give quotient and remender
+        min,sec=divmod(temp,60)
         if min>60:
            hour,min=divmod(min,60)
-        timer="{:02d}:{:02d}:{:02d}".format(hour,min,sec)  # look "https://pyformat.info/#number"
+        timer="{:02d}:{:02d}:{:02d}".format(hour,min,sec)
         time.sleep(1)
         print(timer,end="\r")
         temp-=1
